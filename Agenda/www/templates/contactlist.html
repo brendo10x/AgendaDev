@@ -1,0 +1,15 @@
+<ion-view view-title="ContactList">
+  <ion-content>
+	 <ion-list show-delete="false"can-swipe="true">
+   		<ion-item ng-repeat="cont in contacts" href="#/app/contactlist/{{cont.id}}">
+                         <ion-option-button class="button-positive icon ion-edit" ng-click="editmodal({{cont.id}})" ></ion-option-button>
+                        <ion-option-button class="button-assertive icon ion-trash-a"ng-click="delete({{cont.id}})"></ion-option-button>
+     		<h2>{{cont.nickname}}</h2>
+     		<p>{{cont.github}}</p>
+     	</ion-item>
+   </ion-list> 
+    <ion-infinite-scroll ng-if="!noMoreItem" on-infinite="getlist()" distance="10%"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>
+
+

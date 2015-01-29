@@ -1,0 +1,27 @@
+<ion-modal-view>
+	<ion-header-bar>
+	<h1 class="title">Edit Developer</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="close()">Close</button>
+    </div>
+	</ion-header-bar>
+  <ion-content>
+  	<form ng-submit="edit()">
+  	<div class="list">
+
+		<label class="item item-input">
+			<span class="input-label">Nickname: </span>
+			<input type="text" ng-model="dev.nickname"></input>
+		</label>
+		<label class="item item-input">
+			<span class="input-label">Phone: </span>
+			<input type="text" ng-model="dev.phone"></input>
+		</label>
+		<button class="button button-block button-positive icon ion-edit"> Editar</button>
+	
+  	</div>
+  	</form>
+  </ion-content>
+</ion-view>
+
+
